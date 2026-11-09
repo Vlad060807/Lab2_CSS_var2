@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №2 — CSS</title>
+
+    <!-- Зовнішня таблиця стилів -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Внутрішня таблиця стилів -->
+    <style>
+        .internal-style {
+            color: darkgreen;
+            background-color: #e2f3e2;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header id="page-header">
+    <h1>Каскадні таблиці стилів</h1>
+</header>
+
+    <main>
+        <section>
+            <h2>1. Способи підключення CSS</h2>
+
+            <!-- Inline-стиль -->
+            <p style="color: darkred; background-color: #ffe4e4; padding: 12px;">
+                Цей абзац оформлено через атрибут style.
+            </p>
+
+            <p class="internal-style">
+                Цей абзац оформлено через блок style у секції head.
+            </p>
+
+            <p class="external-style">
+                Цей абзац оформлено через зовнішній файл style.css.
+                <span class="highlight">Це рядковий елемент span.</span>
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Позиціонування елементів</h2>
+
+            <div class="position-container">
+                Батьківський блок має position: relative.
+                <span class="position-label">position: absolute</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Обтікання елемента за допомогою float</h2>
+
+            <div class="float-container">
+                <div class="float-box">CSS</div>
+                <p>
+                    Блок із написом CSS розміщений ліворуч за допомогою
+                    властивості float: left. Текст обтікає його справа.
+                    CSS дозволяє задавати кольори, розміри, відступи
+                    та розташування елементів вебсторінки.
+                    Коли текст займає більше місця, ніж висота блока,
+                    наступні рядки продовжуються під ним.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Радіокнопки зі зміною оформлення</h2>
+            <p>Вибери один із варіантів:</p>
+
+            <div class="radio-group">
+                <input type="radio" id="option1" name="choice"
+                       value="1" checked>
+                <label for="option1">Варіант 1</label>
+
+                <input type="radio" id="option2" name="choice"
+                       value="2">
+                <label for="option2">Варіант 2</label>
+
+                <input type="radio" id="option3" name="choice"
+                       value="3">
+                <label for="option3">Варіант 3</label>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Flexbox і властивість order</h2>
+            <p>
+                Порядок у HTML: 1, 2, 3, 4.
+                Порядок на сторінці: 3, 4, 1, 2.
+            </p>
+
+            <div class="flex-container">
+                <div class="flex-item item1">1</div>
+                <div class="flex-item item2">2</div>
+                <div class="flex-item item3">3</div>
+                <div class="flex-item item4">4</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
